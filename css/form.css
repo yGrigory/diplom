@@ -1,0 +1,114 @@
+.form {
+    border-top: 1px solid var(--color-grey-ca);
+    border-bottom: 1px solid var(--color-grey-ca);
+}
+.form__cnt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 152px;
+}
+.form__header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black-li);
+    margin: 0;
+}
+.form__txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--color-black-li);
+    margin: 0;
+}
+.form__elem {
+    width: 100%;
+    max-width: 909px;
+    display: flex;
+    justify-content: space-between;
+}
+.elem__input {
+    border: 1px solid var(--color-black-li);
+    outline: none;
+    border-radius: 100px;
+    width: 270px;
+    height: 50px;
+    padding: 9px 24px;
+    transition: background-color .1s ease-in-out;
+}
+.elem__input:focus:not(:hover):not(:active), .elem__input:hover:not(:focus):not(:active) {
+    background-color: #ECECEC;
+}
+.form__btn {
+    position: relative;
+    cursor: pointer;
+    padding: 10.5px 35px;
+    border: 2px solid var(--color-violet-li);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-violet-li);
+    background-color: var(--color-white);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
+    letter-spacing: .8px;
+}
+.form__btn:hover:not(:focus):not(:active) {
+    color: var(--color-white);
+    background-color: var(--color-violet-li);
+}
+.form__btn:focus:not(:hover):not(:active)::before {
+    content: "";
+    position: absolute;
+    top: -14%;
+    left: -2.5%;
+    width: 104%;
+    height: 120%;
+    border-radius: 100px;
+    border: 2px solid var(--color-pink);
+}
+.form__btn:active {
+    color: var(--color-white);
+    background-color: var(--color-violet);
+    box-shadow: inset 0 0 0 3px var(--color-violet); 
+}
+.is-invalid {
+    border: 1px solid #D11616;
+}
+.just-validate-error-label[data-tooltip=true][style] {
+    background: transparent;
+    color: #D11616;
+    padding: 0;
+    transform: translate(170px,-30px);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.just-validate-error-label[data-tooltip=true]:before {
+    content: none;
+}
+.callback__header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black-li);
+    margin: 0 0 6px 0;
+    letter-spacing: .8px;
+}
+.callback__whatsapp {
+    margin-right: 17px;
+}
+.callback__telegram, .callback__whatsapp {
+    border-radius: 50%;
+    transition: opacity .2s ease-in-out;
+}
+.callback__link:hover:not(:focus):not(:active) svg {
+    opacity: .3;
+}
+.callback__link:focus:not(:hover):not(:active) svg {
+    opacity: .3;
+}
+.callback__link:active svg {
+    border: 1px solid var(--color-violet-li);
+}

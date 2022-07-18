@@ -1,0 +1,137 @@
+:root {
+    --color-pink-tran: #C283F366;
+    --color-black: #000000;
+    --color-black-li: #333;
+    --color-grey: #666;
+    --color-grey-li: #999;
+    --color-pink: #C283F3;
+    --color-pink-li: #D1A9F0;
+    --color-violet: #7943A4;
+    --color-violet-li: #9D5CD0;
+    --color-white: #fff;
+    --color-grey-ca: #CACACA;
+    --color-grey-ec: #ECECEC;
+    --color-white-tran: #FFFFFFD9;
+    --color-white-tran-ex: #FFFFFF33;
+    --color-black-tran: #000000E5;
+    --color-black-tran-ex: #00000080;
+}
+.header {
+    color: var(--color-white);
+}
+.container {
+    width: 84.2%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.header__wrapper {
+    display: flex;
+    background-color: var(--color-black);
+}
+.header__cnt {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.header__lst {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    max-width: 750px;
+    flex-grow: 1;
+    align-items: center;
+    margin-right: auto;
+}
+.header__img-cont {
+    padding-right: 11.188%;
+}
+.header__lst-item {
+    font-weight: 600;
+    font-size: 18px;
+}
+.header__lst-href {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-white);    
+    font-weight: 600;
+    z-index: 0;
+    transition: color .2s ease-in-out;
+}
+.header__lst-href::after {
+    position: absolute;
+    content: '';
+    width: 115%;
+    height: 116%;
+    top: -8%;
+    left: -7.5%;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    z-index: -1;
+}
+.header__lst-href:focus:not(:hover):not(:active)::after {
+    background-color: var(--color-violet);
+}
+.header__lst-href:hover:not(:focus):not(:active) {
+    color: var(--color-pink);
+}
+.header__lst-href:active {
+    color: var(--color-violet);
+}
+.header__enter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 40px;
+    z-index: 1;
+}
+.header__enter:focus::before {
+    background-color: transparent;
+    transition: background-color .2s;
+}
+.header__enter:focus:not(:hover)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -4px;
+    right: -8px;
+    width: 89px;
+    height: 29px;
+    background-color: var(--color-violet);
+}
+.header__enter:hover:not(:focus):not(:active) span {
+    color: var(--color-pink);
+}
+.header__enter:hover:not(:focus):not(:active) .header__enter-svg {
+    display: none;
+}
+.header__enter:hover:not(:focus):not(:active) .header__enter-svg--focused  {
+    display: block;
+    margin-right: 7px;
+}
+.header__enter:active span {
+    color: var(--color-violet-li);
+}
+.header__enter:active .header__enter-svg {
+    display: none; 
+}
+.header__enter:active .header__enter-svg--focused {
+    display: block; 
+    margin-right: 7px;
+}
+.header__enter:active .header__enter-svg--focused path {
+    fill: var(--color-violet-li);
+}
+.header__enter-svg {
+    margin-right: 7px;
+}
+.header__enter-href {
+    color: var(--color-white);
+    font-size: 18px;
+}
+.header__enter-svg--focused {
+    display: none;
+}
+.first-sec {
+    background-color: var(--color-black-tran-ex);
+}

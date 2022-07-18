@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    align-items: center;
+    min-height: 140px;
+    width: 100%;
+    background-color: var(--color-black);
+}
+.footer__cnt {
+    display: flex;
+    height: 100%;
+    background: url("../img/blanchard-logo.svg") left center no-repeat;
+}
+.footer__link-first {
+    margin-right: 20px;
+    margin-left: auto;
+}
+.footer__svg path {
+    transition: fill .2s ease-in-out;
+}
+.footer__svg:hover:not(:focus):not(:active) path, .footer__svg:focus:not(:hover):not(:active) path {
+    fill: var(--color-white);
+}
+.footer__svg:active path {
+    fill: var(--color-violet-li);
+}

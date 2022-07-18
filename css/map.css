@@ -1,0 +1,42 @@
+#map {
+    width: 100%;
+    height: 700px;
+}
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+.ymaps-2-1-79-map-copyrights-promo {
+    display: none;
+}
+.ymaps-2-1-79-controls__toolbar_right {
+    display: none;
+}
+.ymaps-2-1-79-copyrights-pane {
+    display: none;
+}
+.ymaps-2-1-79-controls__control_toolbar {
+    display: none;
+}
+.ymaps-2-1-79-user-selection-none {
+    display: block;
+}
+.ymaps-2-1-79-zoom__scale {
+    display: none;
+}
+.ymaps-2-1-79-zoom {
+    height: 0 !important;
+}
+.ymaps-2-1-79-zoom__button {
+    box-shadow: none;
+}
+.ymaps-2-1-79-controls__bottom {
+    display: none;
+}
+.ymaps-2-1-79-controls__toolbar_left .ymaps-2-1-79-user-selection-none {
+    position: absolute !important;
+    top: 320px;
+    right: 10px;
+}
+.ymaps-2-1-79-controls__control {
+    inset: 265px 10px auto auto !important;
+}
