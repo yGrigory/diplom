@@ -29,7 +29,6 @@ const events_swiper = new Swiper('.events__swiper', {
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 50,
-  autoHeight: true,
   navigation: {
     nextEl: '.events__swiper-button-next',
     prevEl: '.events__swiper-button-prev',
