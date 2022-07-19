@@ -23,7 +23,6 @@ const gal_swiper = new Swiper('.gal__right-swiper', {
     prevEl: '.gal__right-swiper-button-prev',
   },
 });
-console.log(gal_swiper);
 const events_swiper = new Swiper('.events__swiper', {
   direction: 'horizontal',
   slidesPerView: 3,

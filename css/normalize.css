@@ -41,6 +41,7 @@ p {
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    outline: none;
 }
 /**
 * Render the `main` element consistently in IE.

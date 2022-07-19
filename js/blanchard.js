@@ -30,9 +30,10 @@ item.addEventListener("click", function() {
     this.classList.toggle(activeClassbtns);
 })
 })  
-let tabsBtn = document.querySelectorAll('.swiper-slide__btn');
-tabsBtn.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
+
+let tabsBtn = document.querySelectorAll('.gal__right-swiper-slide');
+tabsBtn.forEach(function(btn_1) {
+    btn_1.addEventListener('click', function(e) {
         const path = e.currentTarget.dataset.path;
         document.querySelector(`[data-target="${path}"]`).classList.toggle("swiper-slide__modal--active");
         document.body.classList.add('body__no-scroll');
