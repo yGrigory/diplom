@@ -9,7 +9,7 @@ let tabBtn = document.querySelectorAll('.cat__tabs-item');
 
 paintBtn.forEach(function(element) {
     element.addEventListener('click', function(e) {
-        const path = e.currentTarget.dataset.path;
+        let path = e.currentTarget.dataset.path;
         tabBtn.forEach(function(element){element.classList.remove('cat__tabs-item--active')});
         document.querySelector(`[data-target="${path}"]`).classList.add('cat__tabs-item--active');
     });

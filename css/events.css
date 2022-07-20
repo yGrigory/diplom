@@ -53,11 +53,20 @@ img {
     transform: rotate(180deg);
 }
 .events__swiper-block {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     max-width: 500px;
 }
 .swiper-autoheight, .swiper-autoheight .swiper-slide {
     height: 100%;
+}
+.events__swiper-txt {
+    padding-bottom: 22px;
+}
+.events__swiper-block-img {
+    width: 100%;
+    object-fit: contain;
 }
 .events__swiper-block-content {
     display: flex;
@@ -65,6 +74,7 @@ img {
     padding: 13px 50px 43px 50px;
     border: 1px solid var(--color-grey-ca);
     min-height: 400px;
+    flex-grow: 1;
 }
 .events__swiper-span {
     font-weight: 600;

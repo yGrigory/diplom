@@ -51,6 +51,9 @@
 }
 .projects__swiper-container-img {
     display: inline-block;
+    max-width: max-content;
+    margin-right: auto;
+    margin-left: auto;
 }
 .projects__swiper-img {
     display: inline-block;

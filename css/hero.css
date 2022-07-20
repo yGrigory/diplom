@@ -66,8 +66,9 @@ ul {
 }
 .hero__menu {
     display: flex;
-    min-width: 730px;
-    width: 64.75%;
+    min-width: 670px;
+    max-width: 1037px;
+    width: 100%;
     justify-content: space-between;
     margin-right: auto;
 }

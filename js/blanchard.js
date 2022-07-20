@@ -30,7 +30,14 @@ item.addEventListener("click", function() {
     this.classList.toggle(activeClassbtns);
 })
 })  
-
+window.onresize = function() {
+    SetWidth();
+    let screenWidth = window.screen.width;
+    if (screenWidth <= 1500) {
+        let elem = document.querySelector(".cat__paint");
+        elem.style = "grid-template-columns: 1fr 1fr";
+    }
+}
 let tabsBtn = document.querySelectorAll('.gal__right-swiper-slide');
 tabsBtn.forEach(function(btn_1) {
     btn_1.addEventListener('click', function(e) {
