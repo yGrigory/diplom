@@ -40,6 +40,9 @@ ul {
     font-weight: 600;
     transition: box-shadow .2s ease-in-out;
 }
+.hero__menu-svg--active {
+    transform: rotate(180deg);
+}
 .dropdown__txt:hover:not(:focus):not(:active), .dropdown__txt:focus:not(:hover):not(:active) {
     box-shadow: inset 0 0 0px 2px var(--color-violet-li);
 }
@@ -72,29 +75,27 @@ ul {
     justify-content: space-between;
     margin-right: auto;
 }
-.menu__item {
+.hero__menu-item {
     position: relative;
     display: flex;
     align-items: center;
     margin-top: 18.5px;
     margin-bottom: 18.5px;
+    transition: color .3s ease-in-out;
 }
-.menu__item:hover:not(:focus):not(:active) .menu__btn {
+.hero__menu-item:hover:not(:focus):not(:active) .hero__menu-btn {
     color: var(--color-violet-li);
 }
-.menu__item:hover:not(:focus):not(:active) svg path {
+.hero__menu-item:hover:not(:focus):not(:active) svg path {
     stroke: var(--color-violet-li);
 }
-.menu__item:active .menu__btn {
+.hero__menu-item:active .hero__menu-btn {
     color: var(--color-violet);
 }
-.menu__item:active .menu__svg {
-    transform: rotate(180deg);
-}
-.menu__item:active svg path {
+.hero__menu-item:active svg path {
     stroke: var(--color-violet);
 }
-.menu__item::before {
+.hero__menu-item::before {
     content: '';
     position: absolute;
     top: -7%;
@@ -102,15 +103,18 @@ ul {
     width: 110%;
     height: 114%;
 }
-.menu__cnt {
+.hero__menu-cnt {
     z-index: 1;
     padding-left: 4px;
 }
-.menu__svg {
-    z-index: 5;
+.hero__menu-svg {
     transition: transform .2s ease-in-out;
 }
-.menu__btn {
+.hero__header path{
+    z-index: 5;
+    transition: stroke .2s ease-in-out;
+}
+.hero__menu-btn {
     position: relative;
     background-color: transparent;
     border: none;
@@ -122,17 +126,11 @@ ul {
     line-height: 25px;
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
 }
-.menu__item:focus-within:not(:hover):not(:active)::before {
-    position: absolute;
-    content: '';
-    top: -2%;
-    left: -7%;
-    width: 114%;
-    height: 104%;
+.hero__menu-item:focus-within:not(:hover):not(:active)::before {
     background-color: var(--color-violet);
     z-index: 0;
 }   
-.hero__menu .menu__item:last-child {
+.hero__menu .hero__menu-item:last-child {
     margin-right: 0;
 }
 .hero__form {
@@ -206,67 +204,68 @@ ul {
     }
 }
 
-.item_1 {
+.dropdown__item_1 {
     background-image: url("../img/hero-lst-1.png");
 } 
-.item_2 {
+.dropdown__item_2 {
     background-image: url("../img/hero-lst-2.png");
 }
-.item_3 {
+.dropdown__item_3 {
     background-image: url("../img/hero-lst-3.png");
 }
-.item_4 {
+.dropdown__item_4 {
     background-image: url("../img/hero-lst-4.png");
 }
-.item_5 {
+.dropdown__item_5 {
     background-image: url("../img/hero-lst-5.png");
 }
-.item_6 {
+.dropdown__item_6 {
     background-image: url("../img/hero-lst-6.png");
 }
-.item_7 {
+.dropdown__item_7 {
     background-image: url("../img/hero-lst-7.png");
 }
-.item_8 {
+.dropdown__item_8 {
     background-image: url("../img/hero-lst-8.png");
 }
-.item_9 {
+.dropdown__item_9 {
     background-image: url("../img/hero-lst-9.png");
 }
-.item_10 {
+.dropdown__item_10 {
     background-image: url("../img/hero-lst-10.png");
 }
-.item_11 {
+.dropdown__item_11 {
     background-image: url("../img/hero-lst-11.png");
 }
-.item_12 {
+.dropdown__item_12 {
     background-image: url("../img/hero-lst-12.png");
 }
-.item_13 {
+.dropdown__item_13 {
     background-image: url("../img/hero-lst-13.png");
 }
-.item_14 {
+.dropdown__item_14 {
     background-image: url("../img/hero-lst-14.png");
 }
-.item_15 {
+.dropdown__item_15 {
     background-image: url("../img/hero-lst-15.png");
 }
-.item_16 {
+.dropdown__item_16 {
     background-image: url("../img/hero-lst-16.png");
 }
-.item_17 {
+.dropdown__item_17 {
     background-image: url("../img/hero-lst-17.png");
 }
-.item_18 {
+.dropdown__item_18 {
     background-image: url("../img/hero-lst-18.png");
 }
-.item_19 {
+.dropdown__item_19 {
     background-image: url("../img/hero-lst-19.png");
 }
-.item_20 {
+.dropdown__item_20 {
     background-image: url("../img/hero-lst-20.png");
 }
 button[value="Найти"] {
+    cursor: pointer;
     width: 22px;
     height: 22px;
     background-image: url("../img/search-logo.svg");
@@ -287,7 +286,6 @@ button[value="Найти"] {
     color: var(--color-white);
     max-width: 597px;  
     margin: 0; 
-    letter-spacing: 4px;
 }
 .hero__txt {
     color: var(--color-white);
@@ -296,7 +294,6 @@ button[value="Найти"] {
     line-height: 30px;
     margin-top: -4px;
     max-width: 557px;
-    letter-spacing: 1px;
     margin-bottom: 116px;
 }
 .hero__btn {
@@ -305,19 +302,18 @@ button[value="Найти"] {
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    letter-spacing: 1px;
     text-decoration: none;
     color: var(--color-white);
-    padding: 23px 33px;
+    padding: 22.5px 35px;
     background-color: var(--color-violet-li);
     border-radius: 100px;
     border: none;
-    transition: box-shadow .1s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
 }
 .hero__btn:hover:not(:focus):not(:active) {
     box-shadow: inset 0 0 0 3px var(--color-pink-li);
 }
-.hero__btn:focus:not(:hover):not(:active)::before {
+.hero__btn::before {
     position: absolute;
     content: "";
     width: 103.1847%;
@@ -325,9 +321,32 @@ button[value="Найти"] {
     top: -7.142857%;
     right: -1.592356%;
     border-radius: 100px;
+    opacity: 0;
     box-shadow: inset 0 0 0 2px var(--color-pink);
+    transition: opacity .2s ease-in-out;
+}
+.hero__btn:focus:not(:hover):not(:active)::before {
+    opacity: 1;
 }
 .hero__btn:active {
     background-color: var(--color-violet);
     box-shadow: inset 0 0 0 3px var(--color-pink-li);
+}
+@media(max-width: 1042px) {
+    .hero__about {
+        padding-top: 105px;
+        padding-bottom: 137px;
+    }
+    .hero__txt {
+        margin-top: -10px;
+        min-width: 661px;
+        margin-bottom: 155px;
+    }
+}
+@media(max-width: 785px) {
+    .container {
+        max-width: 706px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

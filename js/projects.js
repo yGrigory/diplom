@@ -1,4 +1,4 @@
-
+ // optional for styling
 tippy('#tooltipe1', {
     content: "Пример современных тенденций - современная методология разработки",
 }); 
@@ -9,3 +9,4 @@ tippy('#tooltipe3', {
     content: "В стремлении повысить качество",
 }); 
 
+let project = document.querySelectorAll(".swiper-slide");

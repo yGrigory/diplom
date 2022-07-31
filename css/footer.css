@@ -7,8 +7,11 @@
 }
 .footer__cnt {
     display: flex;
+    justify-content: space-between;
     height: 100%;
-    background: url("../img/blanchard-logo.svg") left center no-repeat;
+}
+.footer__lst {
+    display: flex;
 }
 .footer__link-first {
     margin-right: 20px;
@@ -17,9 +20,18 @@
 .footer__svg path {
     transition: fill .2s ease-in-out;
 }
-.footer__svg:hover:not(:focus):not(:active) path, .footer__svg:focus:not(:hover):not(:active) path {
+.footer__link:hover:not(:focus):not(:active) .footer__svg path, .footer__link:focus:not(:hover):not(:active) .footer__svg path {
     fill: var(--color-white);
 }
-.footer__svg:active path {
+.footer__link:active .footer__svg path {
     fill: var(--color-violet-li);
+}
+@media(max-width: 1041px) {
+    .footer__svg {
+        width: 60px;
+        height: 60px;
+    }
+    .footer__cnt img {
+        object-fit: contain;
+    }
 }

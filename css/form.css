@@ -6,7 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 152px;
+    flex-wrap: wrap;
+    min-height: 154px;
 }
 .form__header {
     font-weight: 600;
@@ -23,21 +24,23 @@
     margin: 0;
 }
 .form__elem {
-    width: 100%;
     max-width: 909px;
+    flex-grow: 1;
     display: flex;
     justify-content: space-between;
 }
-.elem__input {
+.form__input {
     border: 1px solid var(--color-black-li);
     outline: none;
     border-radius: 100px;
-    width: 270px;
+    flex-grow: 1;
+    max-width: 270px;
     height: 50px;
     padding: 9px 24px;
     transition: background-color .1s ease-in-out;
+    margin-right: 20px;
 }
-.elem__input:focus:not(:hover):not(:active), .elem__input:hover:not(:focus):not(:active) {
+.form__input:focus:not(:hover):not(:active), .form__input:hover:not(:focus):not(:active) {
     background-color: #ECECEC;
 }
 .form__btn {
@@ -52,7 +55,7 @@
     color: var(--color-violet-li);
     background-color: var(--color-white);
     transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
-    letter-spacing: .8px;
+    flex-shrink: 0;
 }
 .form__btn:hover:not(:focus):not(:active) {
     color: var(--color-white);
@@ -88,7 +91,7 @@
 .just-validate-error-label[data-tooltip=true]:before {
     content: none;
 }
-.callback__header {
+.form__header {
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
@@ -96,19 +99,36 @@
     margin: 0 0 6px 0;
     letter-spacing: .8px;
 }
-.callback__whatsapp {
+.form__whatsapp {
     margin-right: 17px;
 }
-.callback__telegram, .callback__whatsapp {
+.form__telegram, .form__whatsapp {
     border-radius: 50%;
     transition: opacity .2s ease-in-out;
 }
-.callback__link:hover:not(:focus):not(:active) svg {
+.form__link:hover:not(:focus):not(:active) svg {
     opacity: .3;
 }
-.callback__link:focus:not(:hover):not(:active) svg {
+.form__link:focus:not(:hover):not(:active) svg {
     opacity: .3;
 }
-.callback__link:active svg {
+.form__link:active svg {
     border: 1px solid var(--color-violet-li);
+}
+@media(max-width: 1041px) {
+    .form {
+        padding: 43px 0;
+    }
+    .form__elem {
+        justify-content: normal;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .form__header {
+        margin-bottom: 10px;
+    }
+    .form__txt {
+        margin-bottom: 30px;
+    }
 }

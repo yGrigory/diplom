@@ -1,16 +1,17 @@
-new Accordion('.cat__lst', {
+new Accordion('.catalog__lst', {
     elementClass: 'accordion',
-    triggerClass: 'cat__btn',
-    panelClass: 'cat__content',
-    activeClass: 'cat-cnt--active'
+    triggerClass: 'catalog__btn',
+    panelClass: 'catalog__content',
+    activeClass: 'catalog-cnt--active'
 });
-let paintBtn = document.querySelectorAll('.cat__painters');
-let tabBtn = document.querySelectorAll('.cat__tabs-item');
+let paintBtn = document.querySelectorAll('.catalog__painters');
+let tabBtn = document.querySelectorAll('.catalog__tabs-item');
+let slide = document.querySelectorAll(".gallery__right-swiper-slide");
 
 paintBtn.forEach(function(element) {
     element.addEventListener('click', function(e) {
         let path = e.currentTarget.dataset.path;
-        tabBtn.forEach(function(element){element.classList.remove('cat__tabs-item--active')});
-        document.querySelector(`[data-target="${path}"]`).classList.add('cat__tabs-item--active');
+        tabBtn.forEach(function(element){element.classList.remove('catalog__tabs-item--active')});
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active'); 
     });
 });
