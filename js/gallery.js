@@ -1,11 +1,4 @@
 
-function SetWidthMid() {
-    let slide = document.querySelectorAll(".gallery__right-swiper-slide");
-    let slideWidth = document.querySelector(".gallery__right-swiper-slide").offsetWidth;
-    slide.forEach(function(elem) {
-        elem.style.height = slideWidth * 1.125 + "px";
-    });
-};
 let labelLst = document.querySelectorAll(".gallerylery__left-label");
 labelLst.forEach(function(elem) {
     elem.addEventListener('click', function(e) {

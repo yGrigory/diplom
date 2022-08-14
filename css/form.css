@@ -97,7 +97,6 @@
     line-height: 32px;
     color: var(--color-black-li);
     margin: 0 0 6px 0;
-    letter-spacing: .8px;
 }
 .form__whatsapp {
     margin-right: 17px;
@@ -115,7 +114,7 @@
 .form__link:active svg {
     border: 1px solid var(--color-violet-li);
 }
-@media(max-width: 1041px) {
+@media(max-width: 1024px) {
     .form {
         padding: 43px 0;
     }

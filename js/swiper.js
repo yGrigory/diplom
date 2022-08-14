@@ -34,6 +34,9 @@ const gal_swiper = new Swiper('.gallery__right-swiper', {
       slidesPerGroup: 2,
       spaceBetween: 34,
     },
+    360: {
+      spaceBetween: 38,
+    }
   }
 });
 const events_swiper = new Swiper('.events__swiper', {
@@ -51,14 +54,13 @@ const events_swiper = new Swiper('.events__swiper', {
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 50,
-  autoHeight: true,
   breakpoints: {
-    1042: {
+    1024: {
       slidesPerView: 3,
       slidesPerGroup: 1,
       spaceBetween: 50,
     },
-    791: {
+    768: {
       spaceBetween: 27,
       slidesPerGroup: 3,
       slidesPerView: 3,

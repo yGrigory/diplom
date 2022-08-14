@@ -4,14 +4,38 @@ document.querySelectorAll(".dropdown__simplebar").forEach(dropdown => {
     scrollbarMaxSize: 25,
   });
 })
-  
+function SetWidthMid() {
+    let slide = document.querySelectorAll(".gallery__right-swiper-slide");
+    slide.forEach(function(elem) {
+        let slideWidth = document.querySelector(".gallery__right-swiper-slide").offsetWidth;
+        elem.style.height = slideWidth * 1.125 + "px";
+    });
+};
 function SetHeight() {
     let slides = document.querySelectorAll(".projects__swiper-slide");
     let slideWidth = document.querySelector(".projects__swiper-slide").offsetWidth;
     slides.forEach(function(elem) {
         elem.style.height = 0.3333 * slideWidth + "px";
     })
+};
+function DropHeight() {
+    let slide = document.querySelectorAll(".gallery__right-swiper-slide");
+    slide.forEach(function(elem) {
+        elem.style.height = null;
+    })
+};
+function SetWidthMin() {
+    let slide = document.querySelectorAll(".gallery__right-swiper-slide");
+    slide.forEach(function(elem) {
+        let slideWidth = document.querySelector(".gallery__right-swiper-slide").offsetWidth;
+        elem.style.height = slideWidth * 0.9545454545 + "px";
+    });
 }
+if (window.innerWidth <= 1024) {
+    SetWidthMid();
+    SetHeight();
+}
+
 const btns = document.querySelectorAll(".hero__menu-btn");
 const dropdowns = document.querySelectorAll(".dropdown");
 const activeClassdropdowns = "dropdown__active";
@@ -36,9 +60,12 @@ item.addEventListener("click", function() {
 });
 window.onresize = function() {
     let screenWidth = window.innerWidth;
-    if (screenWidth <= 1041) {
+    if (screenWidth <= 1024) {
         SetWidthMid();
         SetHeight();
+    }
+    if (screenWidth > 1024) {
+        DropHeight();
     }
     if (screenWidth > 907) {
         document.querySelector(".form__btn").style = "margin-top: 0";
@@ -46,10 +73,11 @@ window.onresize = function() {
     if (screenWidth <= 907) {
         document.querySelector(".form__btn").style = "margin-top: 30px";
     }
-    if (screenWidth <= 785) {
+    if (screenWidth <= 768) {
         document.querySelector(".header__form").style.width = screenWidth * 0.8133 + "px";
+        SetWidthMin();
     }
-    if (screenWidth > 785) {
+    if (screenWidth > 768) {
         document.querySelector(".header__form").style.width = "auto";
     }
     const element = document.querySelector(".catalog__paint");

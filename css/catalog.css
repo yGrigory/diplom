@@ -215,7 +215,7 @@ a {
     top: 6.349%;
     background-color: var(--color-grey-li)
 }
-@media (max-width: 1042px) {
+@media (max-width: 1024px) {
     .catalog__tabs, .catalog__lst {
         flex-basis: 47.243243%;
     }
