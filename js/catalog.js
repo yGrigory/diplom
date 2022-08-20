@@ -15,3 +15,4 @@ paintBtn.forEach(function(element) {
         document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active'); 
     });
 });
+

@@ -7,11 +7,15 @@ ul {
     background-color: var(--color-black-tran-ex);
     width: 300px;
     padding: 40px 20px 40px 40px;
-    position: fixed;
-    top: 169.5px;
+    position: absolute;
+    top: 51px;
     visibility: hidden;
     opacity: 0;
     transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    -o-transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    -ms-transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    -moz-transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    -webkit-transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
 }
 .dropdown.dropdown__active {
     visibility: visible;
@@ -39,9 +43,20 @@ ul {
     color: var(--color-white);
     font-weight: 600;
     transition: box-shadow .2s ease-in-out;
+    -o-transition: box-shadow .2s ease-in-out;
+    -ms-transition: box-shadow .2s ease-in-out;
+    -moz-transition: box-shadow .2s ease-in-out;
+    -webkit-transition: box-shadow .2s ease-in-out;
 }
 .hero__menu-svg--active {
     transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.hero__menu-svg path {
+    transition: stroke .2s ease-in-out;
 }
 .dropdown__txt:hover:not(:focus):not(:active), .dropdown__txt:focus:not(:hover):not(:active) {
     box-shadow: inset 0 0 0px 2px var(--color-violet-li);
@@ -109,10 +124,18 @@ ul {
 }
 .hero__menu-svg {
     transition: transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+    -ms-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -webkit-transition: transform .2s ease-in-out;
 }
 .hero__header path{
     z-index: 5;
     transition: stroke .2s ease-in-out;
+    -o-transition: stroke .2s ease-in-out;
+    -ms-transition: stroke .2s ease-in-out;
+    -moz-transition: stroke .2s ease-in-out;
+    -webkit-transition: stroke .2s ease-in-out;
 }
 .hero__menu-btn {
     position: relative;
@@ -125,6 +148,10 @@ ul {
     font-size: 18px;
     line-height: 25px;
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out;
 }
 .hero__menu-item:focus-within:not(:hover):not(:active)::before {
     background-color: var(--color-violet);
@@ -147,6 +174,11 @@ ul {
     border-bottom: 1px solid var(--color-white-tran);
     margin-left: 9px;
     outline: none;
+    transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    -ms-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -webkit-transition: border-color .2s ease-in-out;
 }
 .hero__search::placeholder {
     color: var(--color-white-tran);
@@ -197,13 +229,6 @@ ul {
     width: 100%;
     height: 100%;
 }
-
-@media(max-width: 1200px) {
-    .last-drop {
-        right: 0;
-    }
-}
-
 .dropdown__item_1 {
     background-image: url("../img/hero-lst-1.png");
 } 
@@ -273,6 +298,10 @@ button[value="Найти"] {
     background-color: transparent;
     border: none;
     transform: translateY(3px);
+    -o-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
 }
 .hero__about {
     padding-top: 63px;
@@ -341,6 +370,7 @@ button[value="Найти"] {
         margin-top: -10px;
         min-width: 661px;
         margin-bottom: 155px;
+        min-width: auto;
     }
 }
 @media(max-width: 768px) {
@@ -348,5 +378,92 @@ button[value="Найти"] {
         max-width: 706px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .header__logo-img {
+        width: 100%;
+    }
+}
+@media(max-width: 338px) {
+    .container {
+        max-width: 310px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header__burger-logo {
+        width: 25px;
+        height: 16px;
+    }
+    .header__svg-open {
+        width: 18px;
+        height: 18px;
+    }
+    .header__cnt {
+        padding: 7.75px 10px;
+    }
+    .header__svg-open, .header__svg-close {
+        right: 0;
+        top: 5.5px;
+        left: auto;
+        bottom: auto;
+    }
+    .header__links {
+        padding-top: 16px;
+        padding-left: 16px;
+    }
+    .header__links-svg {
+        width: 15px;
+        height: 15px;
+    }
+    .header__lst {
+        margin-top: 16px;
+        margin-bottom: auto;
+    }
+    .header__lst-href {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .header__enter {
+        margin-bottom: 36px;
+        padding: 10px 30.5px;
+    }
+    .header__enter-href {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .header__enter-svg {
+        width: 9px;
+        height: 9px;
+        margin-right: 4px;
+    }
+    .header__enter-focused {
+        width: 12px;
+        height: 9px;
+    }
+    .hero__about {
+        padding: 30px 10px 45px 10px;
+        text-align: center;
+    }
+    .hero__header {
+        display: inline-block;
+        font-size: 32px;
+        line-height: 44px;
+        max-width: 257px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .hero__txt {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        max-width: 252px;
+        margin-bottom: 41px;
+    }
+    .hero__btn {
+        display: inline-flex;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 12px 20px;
     }
 }

@@ -26,12 +26,13 @@ img {
 .events__swiper-button-prev {
     position: absolute;
     top: 430px;
-    left: -18px;
+    left: 45px;
 }
 .events__swiper-button-next {
     position: absolute;
     top: 425px;
-    left: 99%;
+    left: auto;
+    right: 45px;
 }
 .events__swiper-prev-svg, .events__swiper-next-svg {
     position: absolute;
@@ -60,6 +61,10 @@ img {
 }
 .events__swiper-next-svg {
     transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 .events__swiper-block {
     display: flex;
@@ -111,6 +116,10 @@ img {
     padding-bottom: 4px;
     margin-bottom: 0;   
     transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+    -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
 }
 .events__swiper-link:hover:not(:focus):not(:active) {
     color: var(--color-violet);
@@ -184,4 +193,43 @@ img {
         background-color: var(--color-grey);
     }
 }
-
+@media(max-width: 1024px) {
+    .events__swiper-block-content {
+        padding: 12px 18px 40px 32px;
+    }
+    .events__swiper-header {
+        max-width: 250px;
+    }
+}
+@media(max-width: 768px) {
+    .events__swiper-txt {
+        max-width: 253px;
+        margin-bottom: 24px;
+    }
+    .events__swiper-block-content {
+        padding-bottom: 48px;
+    }
+    .events__swiper-header {
+        margin-bottom: 7px; 
+    }
+}
+@media(max-width: 338px) {
+    .events__header {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 12px;
+    }
+    .events__swiper-block-content {
+        padding: 17px 18px 50px 23px;
+    }
+    .events__swiper-header {
+        margin-top: 9px;
+    }
+    .events__swiper {
+        margin-bottom: 14px;
+    }
+    .events__swiper-pagination {
+        max-width: 110px;
+        grid-template-columns: 25px 25px 25px 25px 25px;
+    }
+}

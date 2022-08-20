@@ -24,18 +24,25 @@ const gal_swiper = new Swiper('.gallery__right-swiper', {
     prevEl: '.gallery__right-swiper-button-prev',
   },
   breakpoints: {
-    1440: {
+    1300: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 50,
+      spaceBetween: 50, 
     },
-    720: {
+    900: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
     },
-    360: {
+    450: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 38,
+    },
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
     }
   }
 });
@@ -65,6 +72,16 @@ const events_swiper = new Swiper('.events__swiper', {
       slidesPerGroup: 3,
       slidesPerView: 3,
     },
+    495: {
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+    },
+    0: {
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    }
   }
 });
 const projects_swiper = new Swiper('.projects__swiper', {
@@ -79,10 +96,15 @@ const projects_swiper = new Swiper('.projects__swiper', {
       slidesPerView: 3,
       slidesPerGroup: 1,
     },
-    768: {
+    540: {
       spaceBetween: 50,
       slidesPerGroup: 2,
       slidesPerView: 2,
+    },
+    360: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 34,
     }
   }
 });
