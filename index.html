@@ -63,7 +63,7 @@
                                     <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
                                 </svg>  
                                 <ul id="header__lst" class="header__lst">
-                                    <li class="header__lst-item"><a href="javascript:void(0);" class="header__lst-href scrollto">О нас</a></li>
+                                    <li class="header__lst-item"><a href="#О нас" class="header__lst-href scrollto">О нас</a></li>
                                     <li class="header__lst-item"><a href="#Галерея" class="header__lst-href scrollto">Галерея</a></li>
                                     <li class="header__lst-item"><a href="#Каталог" class="header__lst-href scrollto">Каталог</a></li>
                                     <li class="header__lst-item"><a href="#События" class="header__lst-href scrollto">События</a></li>
@@ -243,7 +243,7 @@
                 <a href="#Подписка" id="hero__btn" aria-label="Подписаться на рассылку" class="hero__btn scrollto">Подписаться на рассылку</a>
             </div>
         </section>
-        <section class="about">
+        <section id="О нас" class="about">
             <div class="container">
                 <h2 class="about__header basic-header">О нас</h2>
                 <p class="about__txt basic-txt">Ясность нашей позиции очевидна: семантический разбор внешних противодействий 
@@ -1135,34 +1135,6 @@
             </div>
         </footer>
         <script src="js/jquery-1.11.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".header__cnt").on("click","a", function (event) {
-                    event.preventDefault();
-                    var id  = $(this).attr('href'),
-                    top = $(id).offset().top;
-                    $('body,html').animate({scrollTop: top}, 1200);
-                });
-                $("#hero__about").on("click","a", function (event) {
-                    event.preventDefault();
-                    var id  = $(this).attr('href'),
-                    top = $(id).offset().top;
-                    $('body,html').animate({scrollTop: top}, 1200);
-                });
-                $(".catalog__content-txt").on("click", "a", function(event) {
-                    event.preventDefault();
-                    var id  = $(this).attr('href'),
-                    top = $(id).offset().top;
-                    $('body,html').animate({scrollTop: top}, 1200);
-                })
-                $(".catalog__tabs-block").on("click", "a", function(event) {
-                    event.preventDefault();
-                    var id  = $(this).attr('href'),
-                    top = $(id).offset().top;
-                    $('body,html').animate({scrollTop: top}, 1200);
-                })
-            });
-        </script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
         integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" 
@@ -1171,22 +1143,6 @@
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-        <script>
-            ymaps.ready(init);
-            function init(){
-                var myMap = new ymaps.Map("map", {
-                    center: [55.76047247043798,37.614182083666805],
-                    zoom: 14
-                });
-                myPlacemarkWithContent = new ymaps.Placemark([55.76047247043798,37.614182083666805], {
-                }, {
-                    iconLayout: 'default#imageWithContent',
-                    iconImageHref: "img/map_placemark.svg",
-                    iconImageSize: [20, 20],
-                });
-                myMap.geoObjects.add(myPlacemarkWithContent); 
-            } 
-        </script>
         <script src="js/inputmask.min.js"></script>
         <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
         <link rel="stylesheet" href="css/map.css">
@@ -1194,13 +1150,6 @@
         <script src="js/choices.min.js"></script>
         <script src="js/swiper.js"></script>
         <script src="js/projects.js"></script>
-        <script>
-            const element = document.querySelector(".gallery__left-select");
-            const choices = new Choices(element, {
-                searchEnabled: false,
-                itemSelectText: ''
-            })
-        </script>
         <script src="js/accordion.min.js"></script>
         <script src="js/catalog.js"></script>
         <script src="js/hero.js"></script>

@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (338 < window.innerWidth <= 558) {
         document.querySelector(".hero__header").style = "font-size: 40px; line-height: 55px; margin-bottom: 40px;";
+        document.querySelector(".hero__btn").style = "padding: 32.5px 28px;";
     }
     if (window.innerWidth <= 338 || window.innerWidth > 558) {
         document.querySelector(".hero__header").style = "font-size: ''; line-height: ''; margin-bottom: '';";
+        document.querySelector(".hero__btn").style = "padding: ''";
     }
     const element = document.querySelector(".catalog__paint");
     if (screenWidth >= 1372 ) {
@@ -75,17 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     window.onresize = function() {
         let screenWidth = window.innerWidth;
-        if (screenWidth <= 768) {
-            document.querySelector(".header__form").style.width = screenWidth * 0.8133 + "px";
-        }
-        if (screenWidth > 768) {
-            document.querySelector(".header__form").style.width = "auto";
-        }
         if (338 < window.innerWidth <= 558) {
             document.querySelector(".hero__header").style = "font-size: 40px; line-height: 55px; margin-bottom: 40px;";
+            document.querySelector(".hero__btn").style = "padding: 32.5px 28px;";
         }
         if (window.innerWidth <= 338 || window.innerWidth > 558) {
             document.querySelector(".hero__header").style = "font-size: ''; line-height: ''; margin-bottom: '';";
+            document.querySelector(".hero__btn").style = "padding: ''";
         }
         const element = document.querySelector(".catalog__paint");
         if (screenWidth >= 1372 ) {
@@ -116,7 +114,35 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector(".events__swiper-pagination").style = "max-width: ''; grid-template-columns: '';";
         }
     };
+    $('a[href^="#"').on('click', function() {
+
+        let href = $(this).attr('href');
     
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        });
+        return false;
+    });
+    
+    ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.76047247043798,37.614182083666805],
+                zoom: 14
+        });
+        myPlacemarkWithContent = new ymaps.Placemark([55.76047247043798,37.614182083666805], {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "img/map_placemark.svg",
+            iconImageSize: [20, 20],
+        });
+        myMap.geoObjects.add(myPlacemarkWithContent); 
+    } 
+    const elem = document.querySelector(".gallery__left-select");
+    const choices = new Choices(elem, {
+        searchEnabled: false,
+        itemSelectText: ''
+    })
     let tabsBtn = document.querySelectorAll('.gallery__right-swiper-slide');
     tabsBtn.forEach(function(btn_1) {
         btn_1.addEventListener('click', function(e) {

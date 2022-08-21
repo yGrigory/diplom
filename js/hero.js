@@ -23,7 +23,6 @@ heroItem.forEach(function(elem) {
 });
 document.querySelectorAll(".header__lst-href").forEach(function(elem) {
     elem.addEventListener('click', function() {
-        console.log("XX");
         document.querySelector(".header__links").classList.remove("header__links--active")
     })
 })
