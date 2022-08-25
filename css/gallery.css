@@ -62,9 +62,6 @@
     background-color: transparent;
     border-radius: 6px;
 }
-.choices.is-open + .gallery__left-cnt {
-    margin-top: 80px;
-}
 .choices__item {
     font-size: 16px;
 }

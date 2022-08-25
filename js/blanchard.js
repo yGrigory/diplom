@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (320 < screenWidth <= 519) {
         document.getElementById("elem__name").style = "margin: 0 0 12px 0";
-        console.log("XX");
     }
     if (screenWidth <= 320 || screenWidth > 519) {
         document.getElementById("elem__name").style = "margin: ''";
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (320 < screenWidth <= 519) {
             document.getElementById("elem__name").style = "margin: 0 0 12px 0";
-            console.log("XX");
+
         }
         if (screenWidth <= 320 || screenWidth > 519) {
             document.getElementById("elem__name").style = "margin: ''";

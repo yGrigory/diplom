@@ -368,6 +368,12 @@
     .gallery__left {
         max-width: 280px;
     }
+    .choices.is-open + .gallery__left-cnt {
+        margin-top: 80px;
+    }
+    .ymaps-2-1-79-controls__control_toolbar {
+        display: none;
+    }
     .choices__list--single {
         padding-left: 6px;
     }
