@@ -30,36 +30,3 @@
 .footer__link:active .footer__svg path {
     fill: var(--color-violet-li);
 }
-@media(max-width: 1024px) {
-    .footer__svg {
-        width: 60px;
-        height: 60px;
-    }
-    .footer__cnt img {
-        object-fit: contain;
-    }
-    .footer__cnt {
-        flex-wrap: wrap;
-    }
-}
-@media(max-width: 338px) {
-    .footer {
-        min-height: 132px;
-    }
-    .footer__cnt img {
-        width: 96.8px;
-        order: 2;
-    }
-    .footer__lst {
-        order: 1;
-        margin-bottom: 20px;
-    }
-    .footer__svg {
-        width: 50px;
-        height: 50px;
-    }
-    .footer__cnt {
-        flex-direction: column;
-        align-items: center;
-    }
-}

@@ -4,18 +4,3 @@
 .about__txt {
     max-width: 1080px;
 }
-@media(max-width: 338px) {
-    .about {
-        padding-top: 50px;
-        padding-bottom: 41px;
-    }
-    .about__header {
-        font-size: 28px;
-        line-height: 38px;
-        margin-bottom: 12px;
-    }
-    .about__txt {
-        font-size: 14px;
-        line-height: 28px;
-    }
-}

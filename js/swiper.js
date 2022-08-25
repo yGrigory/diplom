@@ -93,11 +93,12 @@ const projects_swiper = new Swiper('.projects__swiper', {
   },
   breakpoints: {
     1042: {
+      spaceBetween: 50,
       slidesPerView: 3,
       slidesPerGroup: 1,
     },
     540: {
-      spaceBetween: 50,
+      spaceBetween: 34,
       slidesPerGroup: 2,
       slidesPerView: 2,
     },

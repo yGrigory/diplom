@@ -11,12 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
     let screenWidth = window.innerWidth;
-    if (screenWidth <= 768) {
-        document.querySelector(".header__form").style.width = screenWidth * 0.8133 + "px";
-    }
-    if (screenWidth > 768) {
-        document.querySelector(".header__form").style.width = "auto";
-    }
     if (338 < window.innerWidth <= 558) {
         document.querySelector(".hero__header").style = "font-size: 40px; line-height: 55px; margin-bottom: 40px;";
         document.querySelector(".hero__btn").style = "padding: 32.5px 28px;";
@@ -32,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (screenWidth < 1372 || screenWidth < 640) {
         element.style = "column-count: 2;";
     }
-    if (screenWidth < 910) {
+    if (screenWidth < 926) {
         element.style = "column-count: 1";
     }
     if (screenWidth <= 768) {
@@ -40,6 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (screenWidth <= 664) {
         element.style = "column-count: 2";
+    }
+    if (320 < screenWidth <= 519) {
+        document.getElementById("elem__name").style = "margin: 0 0 12px 0";
+        console.log("XX");
+    }
+    if (screenWidth <= 320 || screenWidth > 519) {
+        document.getElementById("elem__name").style = "margin: ''";
     }
     if (screenWidth <= 448) {
         element.style = "column-count: 1";
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (screenWidth < 1372 || screenWidth < 640) {
             element.style = "column-count: 2;";
         }
-        if (screenWidth < 910) {
+        if (screenWidth < 926) {
             element.style = "column-count: 1";
         }
         if (screenWidth <= 768) {
@@ -101,28 +102,33 @@ document.addEventListener('DOMContentLoaded', function() {
         if (screenWidth <= 664) {
             element.style = "column-count: 2";
         }
+        if (320 < screenWidth <= 519) {
+            document.getElementById("elem__name").style = "margin: 0 0 12px 0";
+            console.log("XX");
+        }
+        if (screenWidth <= 320 || screenWidth > 519) {
+            document.getElementById("elem__name").style = "margin: ''";
+        }
         if (screenWidth <= 448) {
             element.style = "column-count: 1";
         }
         if (screenWidth <= 338) {
             document.querySelector(".ymaps-2-1-79-i-ua_js_yes").style="height: 320px";
         }
-        if (screenWidth <= 477) {
-            document.querySelector(".events__swiper-pagination").style = "max-width: 110px; grid-template-columns: 25px 25px 25px 25px 25px;";
-        }
-        if (screenWidth > 477) {
-            document.querySelector(".events__swiper-pagination").style = "max-width: ''; grid-template-columns: '';";
-        }
     };
-    $('a[href^="#"').on('click', function() {
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = smoothLink.getAttribute('href');
 
-        let href = $(this).attr('href');
-    
-        $('html, body').animate({
-            scrollTop: $(href).offset().top
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
-        return false;
-    });
+    };
+
     
     ymaps.ready(init);
         function init(){

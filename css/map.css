@@ -43,13 +43,3 @@
 .ymaps-2-1-79-controls__control {
     inset: 265px 10px auto auto !important;
 }
-@media(max-width: 1024px) {
-    .ymaps-2-1-79-controls__control {
-        display: none;
-    }
-}
-@media(max-width: 338px) {
-    #map {
-        height: 320px;
-    }
-}
