@@ -122,11 +122,11 @@
     padding: 0 75px;
     background-color: transparent;
     border: 1px solid var(--color-grey-ca);
-    transition: border-color .2s ease-in-out;
-    -o-transition: border-color .2s ease-in-out;
-    -ms-transition: border-color .2s ease-in-out;
-    -moz-transition: border-color .2s ease-in-out;
-    -webkit-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    -ms-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    -webkit-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 .projects__swiper-link::before {
     position: absolute;
